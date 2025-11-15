@@ -11,6 +11,10 @@
     },
     "lint": {
       "outputs": []
+    },
+    "openapi:generate": {
+      "cache": false,
+      "outputs": []
     }
   }
 }
