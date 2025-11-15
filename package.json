@@ -1,0 +1,23 @@
+{
+  "name": "commit-tree",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "format": "turbo format",
+    "db:generate": "pnpm --filter db db:generate",
+    "db:push": "pnpm --filter db db:push",
+    "db:migrate": "pnpm --filter db db:migrate",
+    "db:seed": "pnpm --filter db db:seed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "turbo": "^2.6.1"
+  }
+}
