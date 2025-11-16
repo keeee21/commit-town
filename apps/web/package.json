@@ -8,10 +8,12 @@
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write",
+    "check": "biome check --write ./src --no-errors-on-unmatched --files-ignore-unknown=true",
     "openapi:generate": "openapi-typescript ../../packages/openapi/schema.yaml -o src/lib/api/schema.ts"
   },
   "dependencies": {
     "next": "16.0.3",
+    "next-auth": "^5.0.0-beta.30",
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },
