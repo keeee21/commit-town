@@ -8,6 +8,10 @@
         "@upstash/context7-mcp"
       ],
       "env": {}
+    },
+    "next-devtools": {
+      "command": "npx",
+      "args": ["-y", "next-devtools-mcp@latest"]
     }
   }
 }
