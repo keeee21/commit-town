@@ -7,6 +7,7 @@ import (
 	"github.com/joho/godotenv"
 	"github.com/keeee21/commit-town/api/controller"
 	"github.com/keeee21/commit-town/api/db"
+	"github.com/keeee21/commit-town/api/repository"
 	"github.com/keeee21/commit-town/api/router"
 	"github.com/keeee21/commit-town/api/usecase"
 	"github.com/labstack/echo/v4"
@@ -30,11 +31,16 @@ func main() {
 		log.Fatalf("Failed to migrate database: %v", err)
 	}
 
+	// Initialize repositories
+	userRepo := repository.NewUserRepository(database)
+
 	// Initialize usecases
 	healthUsecase := usecase.NewHealthUsecase()
+	userUsecase := usecase.NewUserUsecase(userRepo)
 
 	// Initialize controllers
 	healthController := controller.NewHealthController(healthUsecase)
+	userController := controller.NewUserController(userUsecase)
 
 	// Initialize Echo
 	e := echo.New()
@@ -45,7 +51,7 @@ func main() {
 	e.Use(middleware.CORS())
 
 	// Setup routes
-	router.SetupRoutes(e, healthController)
+	router.SetupRoutes(e, healthController, userController)
 
 	// Start server
 	port := os.Getenv("PORT")

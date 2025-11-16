@@ -6,9 +6,11 @@ import (
 )
 
 // SetupRoutes sets up all API routes
-func SetupRoutes(e *echo.Echo, healthController *controller.HealthController) {
+func SetupRoutes(e *echo.Echo, healthController *controller.HealthController, userController *controller.UserController) {
 	// Health check
 	e.GET("/health", healthController.Check)
 
-	// Add more routes here as needed
+	// User routes
+	api := e.Group("/api")
+	api.POST("/users", userController.UpsertUser)
 }
