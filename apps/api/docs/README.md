@@ -1,6 +1,6 @@
-# Commit Tree API ドキュメント
+# Commit Town API ドキュメント
 
-このディレクトリには、Commit Tree APIのドキュメントが含まれています。
+このディレクトリには、Commit Town APIのドキュメントが含まれています。
 
 ## ドキュメント一覧
 

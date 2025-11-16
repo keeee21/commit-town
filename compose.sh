@@ -1,1 +1,1 @@
-docker-compose -p commit-tree -f infra/docker-compose.yaml ${@}
+docker-compose -p commit-town -f infra/docker-compose.yaml ${@}

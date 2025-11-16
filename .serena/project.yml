@@ -78,5 +78,5 @@ excluded_tools: []
 # (contrary to the memories, which are loaded on demand).
 initial_prompt: ""
 
-project_name: "commit-tree"
+project_name: "commit-town"
 included_optional_tools: []

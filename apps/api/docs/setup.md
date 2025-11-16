@@ -13,7 +13,7 @@
 
 ```bash
 git clone <repository-url>
-cd commit-tree
+cd commit-town
 ```
 
 ### 2. 環境変数の設定
@@ -26,7 +26,7 @@ cp .env.example .env
 
 `.env` ファイルを編集:
 ```env
-DATABASE_URL=postgresql://commit_tree:commit_tree@localhost:5432/commit_tree?sslmode=disable
+DATABASE_URL=postgresql://commit_town:commit_town@localhost:5432/commit_town?sslmode=disable
 PORT=8080
 ```
 

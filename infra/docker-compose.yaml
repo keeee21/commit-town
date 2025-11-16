@@ -3,15 +3,15 @@ version: '3.8'
 services:
   postgres:
     image: postgres:16
-    container_name: commit_tree_postgres
+    container_name: commit_town_postgres
     environment:
-      POSTGRES_DB: commit_tree
-      POSTGRES_USER: commit_tree
-      POSTGRES_PASSWORD: commit_tree
+      POSTGRES_DB: commit_town
+      POSTGRES_USER: commit_town
+      POSTGRES_PASSWORD: commit_town
     ports:
       - "5432:5432"
     volumes:
-      - commit_tree_data:/var/lib/postgresql/data
+      - commit_town_data:/var/lib/postgresql/data
 
 volumes:
-  commit_tree_data:
+  commit_town_data:
